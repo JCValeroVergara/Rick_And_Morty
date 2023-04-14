@@ -1,0 +1,17 @@
+.navBarraNavegacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 10vh;
+  background-color: #d5f5e3;
+  opacity: 0.5;
+}
+
+.Botones {
+  background-color: #111;
+  padding: 16px 24px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
