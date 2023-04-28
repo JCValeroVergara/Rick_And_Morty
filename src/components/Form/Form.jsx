@@ -1,16 +1,16 @@
-import style from "./Form.css";
-import { useState } from "react";
-import validation from "./Validation";
+import style from './Form.css';
+import { useState } from 'react';
+import validation from '../Validation/Validation';
 
 const Form = ({ login }) => {
   const [userData, setUserData] = useState({
-    username: "",
-    password: "",
+    username: '',
+    password: '',
   });
 
   const [errors, setErrors] = useState({
-    username: "",
-    password: "",
+    username: '',
+    password: '',
   });
 
   const handlInputChange = (event) => {
@@ -41,7 +41,7 @@ const Form = ({ login }) => {
         value={userData.username}
         onChange={handlInputChange}
       />
-      {errors.username && <p style={{ color: "red" }}>{errors.username}</p>}
+      {errors.username && <p style={{ color: 'red' }}>{errors.username}</p>}
       <hr />
 
       <label htmlFor="password">Password:</label>
@@ -51,7 +51,7 @@ const Form = ({ login }) => {
         value={userData.password}
         onChange={handlInputChange}
       />
-      {errors.password && <p style={{ color: "red" }}>{errors.password}</p>}
+      {errors.password && <p style={{ color: 'red' }}>{errors.password}</p>}
 
       <button>Sumit:</button>
     </form>
