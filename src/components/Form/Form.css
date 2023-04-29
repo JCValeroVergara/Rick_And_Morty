@@ -16,8 +16,8 @@ body {
   height: 100vh;
 }
 .container img {
-  width: 100%; /* ajuste el ancho según sea necesario */
-  margin: 5px; /* ajuste el margen según sea necesario */
+  /* width: 100%; /* ajuste el ancho según sea necesario */
+  /*margin: 5px; ajuste el margen según sea necesario */
 }
 
 .box {

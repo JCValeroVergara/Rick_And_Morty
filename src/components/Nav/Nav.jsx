@@ -1,7 +1,7 @@
-import React from "react";
-import styles from "./Nav.module.css";
-import SearchBar from "../SearchBar/SearchBar";
-import { Link } from "react-router-dom";
+import React from 'react';
+import styles from './Nav.module.css';
+import SearchBar from '../SearchBar/SearchBar';
+import { Link } from 'react-router-dom';
 
 const Nav = ({ onSearch }) => {
   return (
@@ -15,6 +15,9 @@ const Nav = ({ onSearch }) => {
         </button>
         <button>
           <Link to="/home">HOME</Link>
+        </button>
+        <button>
+          <Link to="/favorites">FAVORITES</Link>
         </button>
       </div>
       <SearchBar onSearch={onSearch} />

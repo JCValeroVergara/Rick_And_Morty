@@ -1,11 +1,11 @@
 .App {
-  display: inline;
+  /* display: inline; */
 }
 
 .container {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100vh; */
 }
