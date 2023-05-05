@@ -13,7 +13,7 @@ const Form = ({ login }) => {
     password: '',
   });
 
-  const handlInputChange = (event) => {
+  const handleChange = (event) => {
     setUserData({
       ...userData,
       [event.target.name]: event.target.value,
@@ -40,10 +40,10 @@ const Form = ({ login }) => {
           <label htmlFor="username">Username:</label>
           <ion-icon name="person-circle-outline"></ion-icon>
           <input
-            type="text"
+            type="email"
             name="username"
             value={userData.username}
-            onChange={handlInputChange}
+            onChange={handleChange}
           />
           {errors.username && (
             <p className={styles.errors}>{errors.username}</p>
@@ -56,7 +56,7 @@ const Form = ({ login }) => {
             type="password"
             name="password"
             value={userData.password}
-            onChange={handlInputChange}
+            onChange={handleChange}
           />
           {errors.password && (
             <p className={styles.errors}>{errors.password}</p>
@@ -65,7 +65,7 @@ const Form = ({ login }) => {
         <div className={styles.forget}>
           <label htmlFor="">
             <input type="checkbox" />
-            Remember Me <a href="#">Forgot password?</a>
+            Remember Me <a>Forgot password?</a>
           </label>
         </div>
         <button>

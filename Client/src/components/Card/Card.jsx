@@ -1,5 +1,5 @@
+import styles from './Card.module.css';
 import { Link } from 'react-router-dom';
-import style from './Card.module.css';
 import { addFav, removeFav } from '../../redux/actions';
 import { connect } from 'react-redux';
 import { useState, useEffect } from 'react';
@@ -35,28 +35,28 @@ function Card({
         setIsFav(true);
       }
     });
-  }, [myFavorites]);
+  }, [myFavorites, id]);
 
   return (
-    <div className={style.card}>
+    <div className={styles.card}>
       <div>
-        <img className={style.front} src={image} alt={name} />
+        <img className={styles.front} src={image} alt={name} />
       </div>
 
       <div>
         <Link to={`/detail/${id}`}>
-          <h2 className={style.name}>{name}</h2>
+          <h2 className={styles.name}>{name}</h2>
         </Link>
       </div>
 
-      <div className={style.species}>
+      <div className={styles.species}>
         <h2>{species}</h2>
         <h2>{gender}</h2>
         <h2>{status}</h2>
         <h2>{origin}</h2>
       </div>
 
-      <div className={style.btn}>
+      <div className={styles.btn}>
         <button onClick={() => onClose(id)}>X</button>
       </div>
       <div>

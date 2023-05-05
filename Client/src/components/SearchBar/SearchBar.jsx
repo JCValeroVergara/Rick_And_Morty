@@ -1,19 +1,19 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 export default function SearchBar({ onSearch }) {
-  const [id, setId] = useState("");
+  const [id, setId] = useState('');
 
-  const handlChange = (event) => {
+  const handleChange = (event) => {
     setId(event.target.value);
   };
 
   return (
     <div>
-      <input type="search" onChange={handlChange} value={id} />
+      <input type="search" onChange={handleChange} value={id} />
       <button
         onClick={() => {
           onSearch(id);
-          setId("");
+          setId('');
         }}
       >
         Agregar

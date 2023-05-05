@@ -3,23 +3,20 @@ import styles from './Nav.module.css';
 import SearchBar from '../SearchBar/SearchBar';
 import { Link } from 'react-router-dom';
 
-const Nav = ({ onSearch }) => {
+const Nav = ({ onSearch, setAccess }) => {
+  const handleLogOut = () => {
+    setAccess(false);
+  };
+
   return (
-    <nav className={styles.navBarraNavegacion}>
-      <div>
-        <button>
-          <Link to="/">LOGOUT</Link>
-        </button>
-        <button>
-          <Link to="/about">ABOUT</Link>
-        </button>
-        <button>
-          <Link to="/home">HOME</Link>
-        </button>
-        <button>
-          <Link to="/favorites">FAVORITES</Link>
-        </button>
+    <nav className={styles.nav}>
+      <div className={styles.btns}>
+        <Link to="/about"> ABOUT </Link>
+        <Link to="/home"> HOME </Link>
+        <Link to="/favorites"> Favorites </Link>
       </div>
+
+      <button onClick={handleLogOut}>LOG OUT</button>
       <SearchBar onSearch={onSearch} />
     </nav>
   );
